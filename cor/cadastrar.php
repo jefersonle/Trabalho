@@ -3,7 +3,7 @@
 include '../inc/conexao.inc.php';
 //Testando requisição
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$nome = $_POST['nome'];
+	$nome = $_POST['cor'];
 	if(!empty($nome)){
 		$sql = "INSERT INTO cor (nome) VALUES ('$nome')";
 		pg_query($sql);
