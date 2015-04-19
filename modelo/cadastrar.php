@@ -3,17 +3,18 @@
 include '../inc/conexao.inc.php';
 //Testando requisição
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$nome = $_POST['marca'];
+	$nome = $_POST['modelo'];
+	$marca = $_POST['marca'];
 	if(!empty($nome)){
-		$sql = "INSERT INTO marca (nome) VALUES ('$nome')";
+		$sql = "INSERT INTO modelo (id_marca, nome) VALUES ('$marca', '$nome')";
 		pg_query($sql);
 		header('Location: listar.php');
 	}else{
-		echo 'Marca invalida!';
+		echo 'Modelo invalido!';
 	}
 }
 
-$sql = "SELEECT * FROM marca";
+$sql = "SELECT * FROM marca";
 $marcas = pg_query($sql);
 ?>
 
@@ -36,7 +37,7 @@ $marcas = pg_query($sql);
 				</select>
 			</p>
 			<p>Nome:<input type="text" name="modelo" /></p>
-			<p><input type="submit" value="Cadastrar Marca"></p>
+			<p><input type="submit" value="Cadastrar Modelo"></p>
 		</form>
 	</body>
 </html>
