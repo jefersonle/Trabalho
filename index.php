@@ -4,7 +4,7 @@
 	</head>
 	<body>
 		<div>
-			<h2>Cadastro de Veículos</h2>
+			<h2>Cadastro</h2>
 			<table>
 				<tr>
 					<td><a href="veiculo/listar.php">Gerenciar Veículos</a></td>
