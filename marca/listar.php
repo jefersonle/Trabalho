@@ -16,6 +16,15 @@
 					<td>
 						Nome
 					</td>
+					<td>
+						Ver
+					</td>
+					<td>
+						Editar
+					</td>
+					<td>
+						Deletar
+					</td>
 				</tr>
 			</table>
 		</div>
