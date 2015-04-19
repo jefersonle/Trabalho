@@ -1,3 +1,21 @@
 <?php
-	
 ?>
+<html>
+	<head>
+		<title>Listagem de Cores</title>
+	</head>
+	<body>
+		<div>
+			<table>
+				<tr>
+					<td>
+						ID
+					</td>
+					<td>
+						Nome
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
