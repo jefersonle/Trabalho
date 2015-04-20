@@ -15,9 +15,6 @@
 						Nome
 					</td>
 					<td>
-						Ver
-					</td>
-					<td>
 						Editar
 					</td>
 					<td>
