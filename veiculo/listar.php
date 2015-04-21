@@ -30,8 +30,7 @@ $query = pg_query($sql);
 	<body>
 		<div>
 			<h2>Listagem de Veiculos</h2>
-			<p><a href="cadastrar.php">Novo Veiculo</a></p>
-			<table border="1">
+			<table>
 				<tr>
 					<td>
 						ID

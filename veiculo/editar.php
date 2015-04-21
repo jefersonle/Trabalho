@@ -10,9 +10,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$placa = $_POST['placa'];
 	$ano_fab = $_POST['ano_fab'];
 	$ano_mod = $_POST['ano_mod'];
-	$preco = $_POST['preco'];
 	if(!empty($modelo) && !empty($cor) && !empty($placa) && !empty($ano_fab) && !empty($ano_mod)){
-		$sql = "UPDATE veiculo SET id_modelo='$modelo', id_cor='$cor', placa='$placa', ano_fab='$ano_fab', ano_mod='$ano_mod', preco='$preco' WHERE id_veiculo='$id'";
+		$sql = "UPDATE veiculo SET id_modelo='$modelo' id_cor='$cor' placa='$placa' ano_fab='$ano_fab' ano_mod='$ano_mod' WHERE id_veiculo='$id'";
 		$query = pg_query($sql);
 		
 	}else{
@@ -40,7 +39,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 					$modelos = pg_query($sql);
 					while($dados = pg_fetch_assoc($modelos)){
 				?>
-					<option value="<?=$dados['id_modelo']?>" ><?=$dados['nome']?></option>
+					<option value="<?=$dados['id_modelo']?>" 
+					
+					<?php
+						if($dados['id_modelo'] == $veiculo['id_modelo']) echo "checked='checked'";
+					?>
+					
+					><?=$dados['nome']?></option>
 				<?php
 					}
 				?>
@@ -54,7 +59,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 					$cores = pg_query($sql);
 					while($dados = pg_fetch_assoc($cores)){
 				?>
-					<option value="<?=$dados['id_cor']?>"><?=$dados['nome']?></option>
+					<option value="<?=$dados['id_cor']?>" 
+					
+					<?php
+						if($dados['id_cor'] == $veiculo['id_cor']) echo "checked='checked'";
+					?>
+					
+					><?=$dados['nome']?></option>
 				<?php
 					}
 				?>
@@ -63,7 +74,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			<p>Placa:<input type="text" name="placa" value="<?=$veiculo['placa']?>" /></p>
 			<p>Ano de Fabricação:<input type="text" name="ano_fab" value="<?=$veiculo['ano_fab']?>" /></p>
 			<p>Ano do Modelo:<input type="text" name="ano_mod" value="<?=$veiculo['ano_mod']?>"/></p>
-			<p>Preço:<input type="text" name="preco" value="<?=$veiculo['preco']?>"/></p>
 			<p><input type="submit" value="Editar Veiculo"></p>
 		</form>
 	</body>

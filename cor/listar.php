@@ -11,9 +11,7 @@ $query = pg_query($sql);
 	</head>
 	<body>
 		<div>
-			<h2>Listagem de Cores</h2>
-			<p><a href="cadastrar.php">Nova Cor</a></p>
-			<table border="1">
+			<table>
 				<tr>
 					<td>
 						ID
