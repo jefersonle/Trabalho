@@ -13,7 +13,7 @@
 					<td><a href="modelo/listar.php">Gerenciar Modelos</a></td>
 				</tr>
 				<tr>
-					<td><a href="vmarca/listar.php">Gerenciar Marcas</a></td>
+					<td><a href="marca/listar.php">Gerenciar Marcas</a></td>
 				</tr>
 				<tr>
 					<td><a href="cor/listar.php">Gerenciar Cores</a></td>

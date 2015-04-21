@@ -1,5 +1,14 @@
 <?php
-	
+include '../inc/conexao.inc.php';
+$sql = "SELECT
+		modelo.id_modelo,
+		modelo.id_marca,
+		modelo.nome modelo_nome,
+		marca.nome marca_nome
+	FROM
+		modelo
+	INNER JOIN marca ON marca.id_marca = modelo.id_marca";
+$query = pg_query($sql);
 ?>
 <html>
 	<head>
@@ -7,20 +16,21 @@
 	</head>
 	<body>
 		<div>
-			<h2>Listagem de Marcas</h2>
-			<table>
+			<h2>Listagem de Modelos</h2>
+			<p><a href="cadastrar.php">Novo Modelo</a></p>
+			<table border="1">
 				<tr>
 					<td>
 						ID
 					</td>
 					<td>
-						ID da Marca
-					</td>
-					<td>
 						Nome
 					</td>
 					<td>
-						Ver
+						ID da Marca
+					</td>
+					<td>
+						Marca
 					</td>
 					<td>
 						Editar
@@ -29,6 +39,37 @@
 						Deletar
 					</td>
 				</tr>
+				<?php
+					while($dados = pg_fetch_assoc($query)){
+				?>	
+				
+				<tr>
+					<td>
+						<?=$dados['id_modelo']?>
+					</td>
+					<td>
+						<?=$dados['modelo_nome']?>
+					</td>
+					<td>
+						<?=$dados['id_marca']?>
+					</td>
+					<td>
+						<?=$dados['marca_nome']?>
+					</td>
+					<td>
+						<a href="editar.php?id=<?=$dados['id_modelo']?>">Editar</a>
+					</td>
+					<td>
+						<a href="excluir.php?id=<?=$dados['id_modelo']?>">Excluir</a>
+					</td>
+				</tr>
+						
+				<?php		
+					}
+				?>
+				
+				
+				
 			</table>
 		</div>
 	</body>
