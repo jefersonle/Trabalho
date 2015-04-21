@@ -1,5 +1,5 @@
 <?php
-include 'conexao.inc.php';
+include '../inc/conexao.inc.php';
 
 $sql = "SELECT * FROM cor";
 $query = pg_query($sql);
