@@ -1,5 +1,5 @@
 <?php
-include 'conexao.inc.php';
+include '../inc/conexao.inc.php';
 
 $sql = "SELECT
 		veiculo.id_veiculo,
