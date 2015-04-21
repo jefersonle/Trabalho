@@ -3,11 +3,12 @@
 include '../inc/conexao.inc.php';
 //Testando requisição
 $id = $_GET['id'];
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$nome = $_POST['modelo'];
 	$marca = $_POST['marca'];
 	if(!empty($nome)){
-		$sql = "UPDATE modelo SET id_marca='$marca' nome='$nome' WHERE id_modelo='$id'";
+		$sql = "UPDATE modelo SET id_marca='$marca', nome='$nome' WHERE id_modelo='$id'";
 		pg_query($sql);
 	}else{
 		echo 'Modelo invalido!';

@@ -7,7 +7,7 @@ $sql = "SELECT
 		marca.nome marca_nome
 	FROM
 		modelo
-	INNER JOIN marca ON marca.id_marca = modelo.id_modelo";
+	INNER JOIN marca ON marca.id_marca = modelo.id_marca";
 $query = pg_query($sql);
 ?>
 <html>
@@ -16,8 +16,9 @@ $query = pg_query($sql);
 	</head>
 	<body>
 		<div>
-			<h2>Listagem de Marcas</h2>
-			<table>
+			<h2>Listagem de Modelos</h2>
+			<p><a href="cadastrar.php">Novo Modelo</a></p>
+			<table border="1">
 				<tr>
 					<td>
 						ID

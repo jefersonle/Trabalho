@@ -12,7 +12,8 @@ $query = pg_query($sql);
 	<body>
 		<div>
 			<h2>Listagem de Marcas</h2>
-			<table>
+			<p><a href="cadastrar.php">Nova Marca</a></p>
+			<table border="1">
 				<tr>
 					<td>
 						ID

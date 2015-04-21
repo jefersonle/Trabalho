@@ -14,8 +14,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 }
 
-$sql = "SELECT * FROM marca";
-$marcas = pg_query($sql);
 ?>
 
 <html>
@@ -28,6 +26,8 @@ $marcas = pg_query($sql);
 			<p>
 				<select name="marca">
 				<?php 
+					$sql = "SELECT * FROM marca";
+					$marcas = pg_query($sql);
 					while($dados = pg_fetch_assoc($marcas)){
 				?>
 					<option value="<?=$dados['id_marca']?>"><?=$dados['nome']?></option>
