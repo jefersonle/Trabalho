@@ -1,6 +1,8 @@
 <?php
+//Inclui arquivo de conexão ao BD
 include '../inc/conexao.inc.php';
 
+//Seleciona todos os itens da tabela coluna com suas devidas cores, modelos e marcas referenciados utilizando join
 $sql = "SELECT
 		veiculo.id_veiculo,
 		veiculo.nome nome_veiculo,
@@ -79,6 +81,7 @@ $query = pg_query($sql);
 				</tr>
 				
 				<?php
+					//Laço para exibir todos os itens da tabela veiculos
 					while($dados = pg_fetch_assoc($query)){
 				?>		
 				
