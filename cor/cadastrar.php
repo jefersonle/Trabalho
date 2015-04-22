@@ -5,8 +5,10 @@ include '../inc/conexao.inc.php';
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$nome = $_POST['cor'];
 	if(!empty($nome)){
+		//Insere item no banco de dados
 		$sql = "INSERT INTO cor (nome) VALUES ('$nome')";
 		pg_query($sql);
+		//Redireciona para pagina listar
 		header('Location: listar.php');
 	}else{
 		echo 'Nome invalido!';
