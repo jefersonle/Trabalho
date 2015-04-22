@@ -6,8 +6,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$nome = $_POST['modelo'];
 	$marca = $_POST['marca'];
 	if(!empty($nome)){
+		//Insere novo item no BD
 		$sql = "INSERT INTO modelo (id_marca, nome) VALUES ('$marca', '$nome')";
 		pg_query($sql);
+		//Redireciona para pagina listar
 		header('Location: listar.php');
 	}else{
 		echo 'Modelo invalido!';
@@ -26,8 +28,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			<p>
 				<select name="marca">
 				<?php 
+					//Seleciona todos os itens da tabela marca para criar um select de marcas
 					$sql = "SELECT * FROM marca";
 					$marcas = pg_query($sql);
+					//Cria um laço para criar o select de marcas com as linhas do BD
 					while($dados = pg_fetch_assoc($marcas)){
 				?>
 					<option value="<?=$dados['id_marca']?>"><?=$dados['nome']?></option>
