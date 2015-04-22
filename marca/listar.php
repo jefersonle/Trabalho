@@ -1,6 +1,8 @@
 <?php
+//Inclui arquivo de conexão ao banco de dados
 include '../inc/conexao.inc.php';
 
+//Seleciona todos os itens da tabela para exibir na tela
 $sql = "SELECT * FROM marca";
 $query = pg_query($sql);
 
@@ -30,6 +32,7 @@ $query = pg_query($sql);
 				</tr>
 				
 				<?php
+					//Cria laço para exibir cada item selecionado no BD
 					while($dados = pg_fetch_assoc($query)){
 						
 				?>
