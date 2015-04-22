@@ -11,8 +11,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$preco = $_POST['preco'];
 
 	if(!empty($modelo) && !empty($cor) && !empty($placa) && !empty($ano_fab) && !empty($ano_mod)){
+		//Insere item no BD
 		$sql = "INSERT INTO veiculo (id_modelo, id_cor, placa, ano_fab, ano_mod, preco) VALUES ('$modelo', '$cor', '$placa', '$ano_fab', '$ano_mod', '$preco')";
 		pg_query($sql);
+		//Redireciona para pagina listar
 		header('Location: listar.php');
 	}else{
 		echo 'Campos obrigatórios sem preenchimento!';
@@ -30,8 +32,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				Selecione o modelo do veiculo: 
 				<select name="modelo">
 				<?php 
+					//Seleciona todos os itens da tabela modelo para criar um select de modelos
 					$sql = "SELECT * FROM modelo";
 					$modelos = pg_query($sql);
+					//Laço para criar o select de modelos
 					while($dados = pg_fetch_assoc($modelos)){
 				?>
 					<option value="<?=$dados['id_modelo']?>"><?=$dados['nome']?></option>
@@ -44,8 +48,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				Selecione a Cor do Veiculo: 
 				<select name="cor">
 				<?php 
+					//Seleciona todos os itens da tabela cor para criar um select de cores
 					$sql = "SELECT * FROM cor";
 					$cores = pg_query($sql);
+					//Laço para criar um select de cores
 					while($dados = pg_fetch_assoc($cores)){
 				?>
 					<option value="<?=$dados['id_cor']?>"><?=$dados['nome']?></option>
