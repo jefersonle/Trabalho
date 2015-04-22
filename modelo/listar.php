@@ -1,5 +1,8 @@
 <?php
+//Inlcui arquivo de conexao
 include '../inc/conexao.inc.php';
+
+//Seleciona as informações dos modelos e suas devidas marcas relacionadas
 $sql = "SELECT
 		modelo.id_modelo,
 		modelo.id_marca,
@@ -40,6 +43,7 @@ $query = pg_query($sql);
 					</td>
 				</tr>
 				<?php
+					//Laço para exibir cada item da consulta no BD
 					while($dados = pg_fetch_assoc($query)){
 				?>	
 				
