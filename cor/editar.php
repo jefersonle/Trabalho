@@ -6,6 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$nome = $_POST['cor'];
 	$id = $_POST['id'];
 	if(!empty($nome)){
+		//Atualiza cadastro no BD
 		$sql = "UPDATE cor SET nome='$nome' where id_cor='$id'";
 		$query = pg_query($sql);
 	}else{
@@ -21,7 +22,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		<h2>Editar Cor</h2>
 		<form action="" method="post">
 		  <?php
+		  //Pega id do registro por GET
 		  $id = $_GET['id'];
+		  //Seleciona item passado por GET no BD para edição
 		  $sql = "SELECT * FROM cor WHERE id_cor='$id'";
 		  $query = pg_query($sql);
 		    
