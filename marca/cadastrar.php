@@ -5,8 +5,10 @@ include '../inc/conexao.inc.php';
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$nome = $_POST['marca'];
 	if(!empty($nome)){
+		//Insere item no BD
 		$sql = "INSERT INTO marca (nome) VALUES ('$nome')";
 		pg_query($sql);
+		//Redireciona para pagina listar
 		header('Location: listar.php');
 	}else{
 		echo 'Marca invalida!';
