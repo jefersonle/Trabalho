@@ -1,6 +1,9 @@
 <?php
+
+//incluir arquivo de conexao ao BD
 include '../inc/conexao.inc.php';
 
+//Seleciona itens da tabela cor para exibir
 $sql = "SELECT * FROM cor";
 $query = pg_query($sql);
 
@@ -29,6 +32,7 @@ $query = pg_query($sql);
 					</td>
 				</tr>
 				<?php
+					//cria um laço para exibir cada item retornado da consulta
 					while($dados = pg_fetch_assoc($query)){
 						
 				?>
