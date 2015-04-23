@@ -1,4 +1,10 @@
 <?php
+/*
+TRABALHO DOS ALUNOS:
+ALEXSANDRA MARQUES
+JEFERSON EURIDES
+VICTOR STEVES
+*/
 //Inlcui arquivo de conexao
 include '../inc/conexao.inc.php';
 
