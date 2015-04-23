@@ -4,7 +4,7 @@
 include '../inc/conexao.inc.php';
 
 //Seleciona itens da tabela cor para exibir
-$sql = "SELECT * FROM cor";
+$sql = "SELECT * FROM cor ORDER BY id_cor DESC";
 $query = pg_query($sql);
 
 ?>
