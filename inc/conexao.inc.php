@@ -1,4 +1,10 @@
 <?php
+/*
+TRABALHO DOS ALUNOS:
+ALEXSANDRA MARQUES
+JEFERSON EURIDES
+VICTOR STEVES
+*/
 //Variaveis utilizadas na conexao
 $host = 'localhost';
 $usuario = 'postgres';
