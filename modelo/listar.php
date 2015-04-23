@@ -10,7 +10,8 @@ $sql = "SELECT
 		marca.nome marca_nome
 	FROM
 		modelo
-	INNER JOIN marca ON marca.id_marca = modelo.id_marca";
+	INNER JOIN marca ON marca.id_marca = modelo.id_marca
+	ORDER BY modelo.id_modelo DESC";
 $query = pg_query($sql);
 ?>
 <html>
