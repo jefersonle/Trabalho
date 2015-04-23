@@ -1,4 +1,10 @@
 <?php
+/*
+TRABALHO DOS ALUNOS:
+ALEXSANDRA MARQUES
+JEFERSON EURIDES
+VICTOR STEVES
+*/
 //Incluindo arquivo de conexao com DB
 include '../inc/conexao.inc.php';
 //Pegando item a ser editado por GET
