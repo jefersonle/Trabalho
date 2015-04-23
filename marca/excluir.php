@@ -28,5 +28,7 @@ if(isset($_GET['id'])){
 	
 	$sql = "DELETE FROM marca where id_marca='$id'";
 	pg_query($sql);
+	
+	header('Location: listar.php');
 }
 ?>
