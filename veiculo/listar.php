@@ -5,7 +5,6 @@ include '../inc/conexao.inc.php';
 //Seleciona todos os itens da tabela coluna com suas devidas cores, modelos e marcas referenciados utilizando join
 $sql = "SELECT
 		veiculo.id_veiculo,
-		veiculo.nome nome_veiculo,
 		veiculo.id_modelo,
 		veiculo.id_cor,
 		veiculo.placa,
@@ -37,9 +36,6 @@ $query = pg_query($sql);
 				<tr>
 					<td>
 						ID
-					</td>
-					<td>
-						Nome
 					</td>
 					<td>
 						ID do Modelo
@@ -88,9 +84,6 @@ $query = pg_query($sql);
 				<tr>
 					<td>
 						<?=$dados['id_veiculo']?>
-					</td>
-					<td>
-						<?=$dados['nome_veiculo']?>
 					</td>
 					<td>
 						<?=$dados['id_modelo']?>
