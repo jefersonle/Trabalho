@@ -15,5 +15,7 @@ if(isset($_GET['id'])){
 	
 	$sql = "DELETE FROM modelo where id_modelo='$id'";
 	pg_query($sql);
+	
+	header('Location: listar.php');
 }
 ?>
