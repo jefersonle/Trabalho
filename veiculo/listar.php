@@ -126,7 +126,7 @@ $query = pg_query($sql);
 						<a href="editar.php?id=<?=$dados['id_veiculo']?>">Editar</a>
 					</td>
 					<td>
-						<a href="excluir.php?id=<?=$dados['id_veiculo']?>">Excluir</a>
+						<a href="excluir.php?id=<?=$dados['id_veiculo']?>" onclick='javascript: return confirm("TEM CERTEZA QUE DESEJA EXCLUIR ESTE VEICULO?")'>Excluir</a>
 					</td>
 					
 				</tr>		
