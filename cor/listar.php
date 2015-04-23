@@ -1,4 +1,10 @@
 <?php
+/*
+TRABALHO DOS ALUNOS:
+ALEXSANDRA MARQUES
+JEFERSON EURIDES
+VICTOR STEVES
+*/
 
 //incluir arquivo de conexao ao BD
 include '../inc/conexao.inc.php';
