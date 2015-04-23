@@ -1,4 +1,10 @@
 <?php
+/*
+TRABALHO DOS ALUNOS:
+ALEXSANDRA MARQUES
+JEFERSON EURIDES
+VICTOR STEVES
+*/
 //Inclui arquivo de conexão ao banco de dados
 include '../inc/conexao.inc.php';
 
