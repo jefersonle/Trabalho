@@ -19,7 +19,8 @@ $sql = "SELECT
 		veiculo
 	INNER JOIN modelo ON modelo.id_modelo = veiculo.id_modelo
 	INNER JOIN cor ON cor.id_cor = veiculo.id_cor
-	INNER JOIN marca ON marca.id_marca = modelo.id_marca";
+	INNER JOIN marca ON marca.id_marca = modelo.id_marca
+	ORDER BY veiculo.id_veiculo DESC";
 	
 $query = pg_query($sql);
 
