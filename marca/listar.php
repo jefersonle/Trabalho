@@ -3,7 +3,7 @@
 include '../inc/conexao.inc.php';
 
 //Seleciona todos os itens da tabela para exibir na tela
-$sql = "SELECT * FROM marca";
+$sql = "SELECT * FROM marca ORDER BY id_marca DESC";
 $query = pg_query($sql);
 
 ?>
