@@ -15,5 +15,7 @@ if(isset($_GET['id'])){
 	
 	$sql = "DELETE FROM cor where id_cor='$id'";
 	pg_query($sql);
+	
+	header('Location: listar.php');
 }
 ?>
