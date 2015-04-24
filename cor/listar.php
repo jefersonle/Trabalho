@@ -47,7 +47,7 @@ $query = pg_query($sql);
 					<td><?=$dados['id_cor']?></td>
 					<td><?=$dados['nome']?></td>
 					<td><a href="editar.php?id=<?=$dados['id_cor']?>">Editar</a></td>
-					<td><a href="excluir.php?id=<?=$dados['id_cor']?>"  onclick='javascript: return confirm("TEM CERTEZA QUE DESEJA EXCLUIR ESTA COR? \sn\n NOTE QUE TODOS OS VEICULOS DESTA COR TAMBEM SERAO DELETADOS!")'>Excluir</a></td>
+					<td><a href="excluir.php?id=<?=$dados['id_cor']?>"  onclick='javascript: return confirm("TEM CERTEZA QUE DESEJA EXCLUIR ESTA COR? \n\n NOTE QUE TODOS OS VEICULOS DESTA COR TAMBEM SERAO DELETADOS!")'>Excluir</a></td>
 				</tr>
 				
 				<?php		
