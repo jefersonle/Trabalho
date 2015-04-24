@@ -14,8 +14,8 @@ $sql = "SELECT
 		veiculo.id_modelo,
 		veiculo.id_cor,
 		veiculo.placa,
-		veiculo.ano_fab,
-		veiculo.ano_mod,
+		veiculo.ano_fabricacao,
+		veiculo.ano_modelo,
 		veiculo.preco,
 		modelo.nome nome_modelo,
 		modelo.id_marca,
@@ -114,10 +114,10 @@ $query = pg_query($sql);
 						<?=$dados['placa']?>
 					</td>
 					<td>
-						<?=$dados['ano_fab']?>
+						<?=$dados['ano_fabricacao']?>
 					</td>
 					<td>
-						<?=$dados['ano_mod']?>
+						<?=$dados['ano_modelo']?>
 					</td>
 					<td>
 						<?=$dados['preco']?>
