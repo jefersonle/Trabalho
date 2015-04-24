@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$preco = $_POST['preco'];
 	if(!empty($modelo) && !empty($cor) && !empty($placa) && !empty($ano_fab) && !empty($ano_mod)){
 		//Modifica informações do item especificado por GET
-		$sql = "UPDATE veiculo SET id_modelo='$modelo', id_cor='$cor', placa='$placa', ano_fab='$ano_fab', ano_mod='$ano_mod', preco='$preco' WHERE id_veiculo='$id'";
+		$sql = "UPDATE veiculo SET id_modelo='$modelo', id_cor='$cor', placa='$placa', ano_fabricacao='$ano_fab', ano_modelo='$ano_mod', preco='$preco' WHERE id_veiculo='$id'";
 		$query = pg_query($sql);
 		
 	}else{
@@ -72,8 +72,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				</select>
 			</p>
 			<p>Placa:<input type="text" name="placa" value="<?=$veiculo['placa']?>" /></p>
-			<p>Ano de Fabricação:<input type="text" name="ano_fab" value="<?=$veiculo['ano_fab']?>" /></p>
-			<p>Ano do Modelo:<input type="text" name="ano_mod" value="<?=$veiculo['ano_mod']?>"/></p>
+			<p>Ano de Fabricação:<input type="text" name="ano_fab" value="<?=$veiculo['ano_fabricacao']?>" /></p>
+			<p>Ano do Modelo:<input type="text" name="ano_mod" value="<?=$veiculo['ano_modelo']?>"/></p>
 			<p>Preço:<input type="text" name="preco" value="<?=$veiculo['preco']?>"/></p>
 			<p><input type="submit" value="Editar Veiculo"></p>
 		</form>
