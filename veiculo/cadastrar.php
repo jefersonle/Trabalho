@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	if(!empty($modelo) && !empty($cor) && !empty($placa) && !empty($ano_fab) && !empty($ano_mod)){
 		//Insere item no BD
-		$sql = "INSERT INTO veiculo (id_modelo, id_cor, placa, ano_fab, ano_mod, preco) VALUES ('$modelo', '$cor', '$placa', '$ano_fab', '$ano_mod', '$preco')";
+		$sql = "INSERT INTO veiculo (id_modelo, id_cor, placa, ano_fabricacao, ano_modelo, preco) VALUES ('$modelo', '$cor', '$placa', '$ano_fab', '$ano_mod', '$preco')";
 		pg_query($sql);
 		//Redireciona para pagina listar
 		header('Location: listar.php');
